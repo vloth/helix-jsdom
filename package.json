@@ -1,0 +1,21 @@
+{
+  "name": "memento",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "shadow-cljs watch app tests",
+    "test": "shadow-cljs compile node-tests && node out/node-tests.js",
+    "test:watch": "shadow-cljs watch node-tests --config-merge \"{:autorun true}\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-refresh": "^0.13.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "jsdom": "22.0.0",
+    "jsdom-global": "3.0.2",
+    "shadow-cljs": "^2.22.2"
+  }
+}

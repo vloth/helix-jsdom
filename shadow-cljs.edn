@@ -1,0 +1,19 @@
+{:source-paths ["src" "tests"]
+ :dependencies [[lilactown/helix "0.1.9"]]
+ :builds {:app {:target           :browser
+                :devtools         {:http-port 5000
+                                   :http-root "public"
+                                   :preloads [dev.refresh]
+                                   :reload-strategy :full}
+                :modules          {:main {:init-fn main.app/init}}
+                :compiler-options {:install-deps true}}
+ 
+          :tests {:target    :browser-test
+                  :test-dir  "out/tests"
+                  :ns-regexp "-test$"
+                  :devtools  {:http-port 5001
+                              :http-root "out/tests"}}
+          
+          :node-tests {:target    :node-test
+                       :main      node/main
+                       :output-to "out/node-tests.js"}}}
