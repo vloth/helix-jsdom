@@ -1,8 +1,8 @@
 (ns main.app-test
   (:require ["@testing-library/react" :as tlr]
-            [clojure.test :refer [deftest is  use-fixtures]]
+            [clojure.test :refer [deftest is use-fixtures]]
             [helix.core :refer [$]]
-            [main.app :as app]))
+            [main.component :as c]))
 
 (defn setup-root [f]
   (f)
@@ -10,9 +10,7 @@
 
 (use-fixtures :each setup-root)
 
-(defn text [el] (.-textContent el))
-
 (deftest a-component-test
-  (tlr/render ($ app/component-boolean {:value false}))
-  (let [div (.getByText tlr/screen "no")]
-    (is (= (text div) "no"))))
+  (let [container (tlr/render ($ c/component-boolean {:value false}))
+        div       (.getByText container "no")]
+      (is (= "no" (.-textContent div)))))
