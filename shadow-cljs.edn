@@ -1,5 +1,4 @@
-{:source-paths ["src" "tests"]
- :dependencies [[lilactown/helix "0.1.9"]]
+{:deps   {:aliases [:dev]} 
  :builds {:app {:target           :browser
                 :devtools         {:http-port 5000
                                    :http-root "public"
