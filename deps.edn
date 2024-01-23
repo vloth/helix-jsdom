@@ -1,7 +1,6 @@
 {:paths ["src"]
- :deps {lilactown/helix {:git/url "https://github.com/lilactown/helix.git"
-                         :git/sha "9c38a298b077b6ea914a941bb64946a0c1128365"}}
+ :deps {lilactown/helix {:mvn/version "0.2.0"}}
  :aliases {:dev {:extra-paths ["tests"]
-                 :extra-deps  {thheller/shadow-cljs {:mvn/version "2.23.3"}
-                               cider/cider-nrepl    {:mvn/version "0.30.0"}}}}}
+                 :extra-deps  {thheller/shadow-cljs {:mvn/version "2.26.5"}
+                               cider/cider-nrepl    {:mvn/version "0.45.0"}}}}}
  
