@@ -13,10 +13,10 @@
     "react-refresh": "^0.13.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^14.1.2",
     "global-jsdom": "9.0.1",
     "jsdom": "22.0.0",
     "jsdom-global": "3.0.2",
-    "shadow-cljs": "^2.23.3"
+    "shadow-cljs": "^2.26.5"
   }
 }
